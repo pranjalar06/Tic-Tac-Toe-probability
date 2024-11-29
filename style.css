@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald&family=Rubik+Iso&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: black;
+    color: white;
+    height: 100px;
+    font-size: 67px;
+    font-family: 'Rubik Iso', cursive;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    list-style-type: none;
+}
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    margin-top: 100px;
+    
+    background-color: #D8BFD8;
+}
+.leftcontainer{
+    background-color: #E6E6FA;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+.box{
+    border:  1px solid black ;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+} 
+.leftcontainer :hover{
+    cursor: pointer;
+    background-color:#fff3ff;
+}
+.rightcontainer img{
+    /* display: none; */
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.line{
+    /* width: 30vw; */
+    height: 10px;
+    position: absolute;
+    background-color: rgb(135, 64, 153);
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px purple;
+    transition: width 1s ease-in-out;
+    /* display: none; */
+}
+.info{
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width:800px)
+{
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .info{
+        margin-top: 34px;
+    }
+    .leftcontainer{
+        grid-template-columns: repeat(3, 17.5vw);
+        grid-template-rows: repeat(3,17.5vw);
+    }
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+#reset{
+    color: black;
+    height: 3vw;
+    width: 4.5vw;
+    border-radius: 10px;
+    font-family: 'Libre Baskerville', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Rubik Iso', cursive;
+}
+.progress {
+    height: 25px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+}
+
+.progress-bar {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    width: 0;
+    background-color: #007bff;
+}
